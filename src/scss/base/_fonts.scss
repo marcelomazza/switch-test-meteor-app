@@ -1,9 +1,17 @@
 @font-face {
-	font-family: 'IBMPlexSans-Bold';
-	src: url('fonts/IBMPlexSans-Bold.woff2') format('woff2');
+	font-family: 'IBMPlexSans';
+	src: url('fonts/IBMPlexSans-Light.woff2') format('woff2');
+	font-weight: 200;
 }
 
 @font-face {
-	font-family: 'IBMPlexSans-Regular';
+	font-family: 'IBMPlexSans';
 	src: url('fonts/IBMPlexSans-Regular.woff2') format('woff2');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'IBMPlexSans';
+	src: url('fonts/IBMPlexSans-Bold.woff2') format('woff2');
+	font-weight: 700;
 }
