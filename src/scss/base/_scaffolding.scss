@@ -1,4 +1,9 @@
+html, body {
+	height: 100%;
+}
+
 body {
 	background: $primary-900;
-	font-family: 'IBMPlexSans-Regular', Helvetica, sans-serif;
+	font-family: $regular;
+	-webkit-font-smoothing: antialiased;
 }

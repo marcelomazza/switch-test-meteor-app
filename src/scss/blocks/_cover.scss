@@ -1,0 +1,13 @@
+.cover {
+	color: $white;
+}
+
+.cover__title {
+	text-transform: uppercase;
+	font-size: $xlarge;
+	font-family: $bold; // See README.md for note about boldness
+}
+
+.cover__text {
+	font-size: $large;
+}
