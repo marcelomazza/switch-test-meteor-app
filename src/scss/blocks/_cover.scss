@@ -1,4 +1,5 @@
 .cover {
+	padding: 1em;
 	background: $primary-900;
 	color: $white;
 }
@@ -10,5 +11,6 @@
 }
 
 .cover__text {
+	text-align: center;
 	font-size: $large;
 }

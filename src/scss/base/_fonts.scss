@@ -12,6 +12,12 @@
 
 @font-face {
 	font-family: 'IBMPlexSans';
+	src: url('fonts/IBMPlexSans-Medium.woff2') format('woff2');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'IBMPlexSans';
 	src: url('fonts/IBMPlexSans-Bold.woff2') format('woff2');
 	font-weight: 700;
 }

@@ -3,9 +3,12 @@
 @import "base/fonts";
 @import "base/reset";
 @import "base/scaffolding";
+@import "base/table";
 
 // Helpers
 @import "helpers/centered-children";
+@import "helpers/padded-container";
+@import "helpers/text-right";
 @import "helpers/title-medium";
 
 // Blocks
