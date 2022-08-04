@@ -1,0 +1,19 @@
+.tabs {
+	border-bottom: 1px solid $gray-300;
+}
+
+.tabs__item {
+	display: inline-block;
+}
+
+.tabs__link {
+	display: block;
+	padding: 3px;
+	margin-right: 20px;
+	color: $gray-900;
+	font-size: $regular;
+
+	&.is-selected {
+		border-bottom: 3px solid $primary-900;
+	}
+}
