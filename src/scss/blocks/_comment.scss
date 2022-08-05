@@ -1,0 +1,16 @@
+.comment {
+	padding: 15px 0;
+	border-bottom: 1px dashed $gray-300;
+	color: $gray-900;
+	font-size: $xbody;
+}
+
+.comment__header {
+	display: flex;
+}
+
+.comment__time {
+	margin-left: auto;
+	color: $gray-300;
+	font-size: $small;
+}

@@ -17,3 +17,20 @@ input {
 		border-bottom-color: $primary-900;
 	}
 }
+
+textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid $gray-300;
+	background: $white;
+	font-size: $xbody;
+
+	&::placeholder {
+		color: $gray-300;
+	}
+
+	&:hover {
+		border-color: $primary-900;
+	}
+}

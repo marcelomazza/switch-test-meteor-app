@@ -31,88 +31,121 @@
 				<aside class="padded-container">
 					<ul class="tabs">
 						<li class="tabs__item">
-							<a class="tabs__link is-selected" href="#">Details</a>
+							<a class="tabs__link is-selected" href="#details">Details</a>
 						</li>
 						<li class="tabs__item">
-							<a class="tabs__link" href="#">Comments</a>
+							<a class="tabs__link" href="#comments">Comments</a>
 						</li>
 					</ul>
 
-					<form action="#">
-						<ul>
-							<li class="form-item">
-								<label class="form-item__label" for="activityPeriod">Activity Period</label>
-								<input class="form-item__input" id="activityPeriod" type="text" value="Jan 04">
-								<div class="tooltip">
-									<button class="tooltip__trigger"><img src="img/exclamation.svg"></button>
-									<div class="tooltip__dialog padded-container">
-										<button class="tooltip__close tooltip__trigger"><img src="img/close-gray.svg"></button>
-										<h2 class="tooltip__title">Activity Period</h2>
-										<p>The showers are broken down by intensity with major, minor, variable, and weak showers being separated into their own groups. The general public is encouraged to use the list of major showers as they are the most well known and provide the most activity on a year to year basis. The other showers rarely surpass ten meteors per hour at maximum and are difficult to observe by the general public.</p>
+					<div id="details" class="tabs__tab">
+						<form action="#">
+							<ul>
+								<li class="form-item">
+									<label class="form-item__label" for="activityPeriod">Activity Period</label>
+									<input class="form-item__input" id="activityPeriod" type="text" value="Jan 04">
+									<div class="tooltip">
+										<button class="tooltip__trigger"><img src="img/exclamation.svg"></button>
+										<div class="tooltip__dialog padded-container">
+											<button class="tooltip__close tooltip__trigger"><img src="img/close-gray.svg"></button>
+											<h2 class="tooltip__title">Activity Period</h2>
+											<p>The showers are broken down by intensity with major, minor, variable, and weak showers being separated into their own groups. The general public is encouraged to use the list of major showers as they are the most well known and provide the most activity on a year to year basis. The other showers rarely surpass ten meteors per hour at maximum and are difficult to observe by the general public.</p>
+										</div>
 									</div>
-								</div>
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="maximunDate">Maximun Date</label>
+									<input class="form-item__input" id="maximunDate" type="text" value="283.3°">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="maximumSL">Maximum S.L.</label>
+									<input class="form-item__input" id="maximumSL" type="text" value="15:20">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="radiantRA">Radiant R.A.</label>
+									<input class="form-item__input" id="radiantRA" type="text" value="+49.7°">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="radiantDesc">Radiant Desc.</label>
+									<input class="form-item__input" id="radiantDesc" type="text" value="40.2">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="velocityKms">Velocity km/s</label>
+									<input class="form-item__input" id="velocityKms" type="text" value="2.1">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="r">R</label>
+									<input class="form-item__input" id="r" type="text" value="120">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="time">Time</label>
+									<input class="form-item__input" id="time" type="text" value="0500">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="moon">Moon</label>
+									<input class="form-item__input" id="moon" type="text" value="02">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="quadrantids">Quadrantids</label>
+									<input class="form-item__input" id="quadrantids" type="text" value="GBP">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="lyrids">Lyrids</label>
+									<input class="form-item__input" id="lyrids" type="text" value="9.0000%">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="perseids">Perseids</label>
+									<input class="form-item__input" id="perseids" type="text" value="GBP">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="etaAquarids">Eta Aquarids</label>
+									<input class="form-item__input" id="etaAquarids" type="text" value="8,257.50">
+								</li>
+							</ul>
+
+							<div class="form-btns">
+								<button class="btn">
+									<img class="btn__img" src="img/floppy.svg">
+									Save
+								</button>
+								<button class="btn btn--inverted">
+									<img class="btn__img" src="img/flame.svg">
+									Explode
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<div id="comments" class="tabs__tab" style="display: none;">
+						<form action="#" class="comment-form">
+							<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Write your comment"></textarea>
+							<button class="comment-form__btn btn-icon"><img src="img/send.svg"></button>
+						</form>
+
+						<ul>
+							<li class="comment">
+								<header class="comment__header">
+									<h2>Charles Mayer</h2>
+									<time class="comment__time">Oct 16, 17:23 AM</time>
+								</header>
+								<p>
+									This appears to be a different program.<br>
+									Please set up as: 556*1989<br>
+									Thanks!
+								</p>
 							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="maximunDate">Maximun Date</label>
-								<input class="form-item__input" id="maximunDate" type="text" value="283.3°">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="maximumSL">Maximum S.L.</label>
-								<input class="form-item__input" id="maximumSL" type="text" value="15:20">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="radiantRA">Radiant R.A.</label>
-								<input class="form-item__input" id="radiantRA" type="text" value="+49.7°">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="radiantDesc">Radiant Desc.</label>
-								<input class="form-item__input" id="radiantDesc" type="text" value="40.2">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="velocityKms">Velocity km/s</label>
-								<input class="form-item__input" id="velocityKms" type="text" value="2.1">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="r">R</label>
-								<input class="form-item__input" id="r" type="text" value="120">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="time">Time</label>
-								<input class="form-item__input" id="time" type="text" value="0500">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="moon">Moon</label>
-								<input class="form-item__input" id="moon" type="text" value="02">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="quadrantids">Quadrantids</label>
-								<input class="form-item__input" id="quadrantids" type="text" value="GBP">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="lyrids">Lyrids</label>
-								<input class="form-item__input" id="lyrids" type="text" value="9.0000%">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="perseids">Perseids</label>
-								<input class="form-item__input" id="perseids" type="text" value="GBP">
-							</li>
-							<li class="form-item">
-								<label class="form-item__label" for="etaAquarids">Eta Aquarids</label>
-								<input class="form-item__input" id="etaAquarids" type="text" value="8,257.50">
+							<li class="comment">
+								<header class="comment__header">
+									<h2>Helen Roth</h2>
+									<time class="comment__time">Oct 16, 14:05 AM</time>
+								</header>
+								<p>
+									CFG<br>
+									LOOKS LIKE THIS IS TREATY 556, THERE IS A CLAIM SET UP 556*1990*50, HOWEVER THE CLAIMANT IS DIFFERENT
+								</p>
 							</li>
 						</ul>
-
-						<div class="form-btns">
-							<button class="btn">
-								<img class="btn__img" src="img/floppy.svg">
-								Save
-							</button>
-							<button class="btn btn--inverted">
-								<img class="btn__img" src="img/flame.svg">
-								Explode
-							</button>
-						</div>
-					</form>
+					</div>
 
 				</aside>
 			</section>
@@ -637,6 +670,14 @@
 
 			$('.tooltip__trigger').on('click', function() {
 				$(this).parents('.tooltip').toggleClass('is-visible');
+			});
+
+			$('.tabs__link').on('click', function() {
+				$('.tabs__link').removeClass('is-selected');
+				$(this).addClass('is-selected');
+
+				$('.tabs__tab').hide();
+				$($(this).attr('href')).show();
 			});
 		</script>
 
