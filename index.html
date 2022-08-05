@@ -7,26 +7,679 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Meteor App</title>
+		<title>My Meteors | Meteor App</title>
 
 		<link rel="stylesheet" href="style.css">
 
 	</head>
 
-	<body class="cover centered-children">
+	<body class="main-layout">
 
-		<img src="img/logo.svg">
+		<nav class="nav">
+			<button><img id="logo" class="nav__logo" src="img/logo.svg"></button>
+		</nav>
 
-		<h1 class="cover__title">Meteor</h1>
+		<main id="main" class="main-layout__main">
 
-		<p class="cover__text">Welcome to Meteor App</p>
+			<section class="main-layout__sidebar">
+				<header class="padded-container--small">
+					<button class="btn-icon"><img src="img/copy.svg"></button>
+					<button class="btn-icon"><img src="img/bookmark.svg"></button>
+					<button class="btn-icon"><img src="img/trash.svg"></button>
+					<button id="close" class="btn-icon float-right"><img src="img/close.svg"></button>
+				</header>
+				<aside class="padded-container">
+					<ul class="tabs">
+						<li class="tabs__item">
+							<a class="tabs__link is-selected" href="#details">Details</a>
+						</li>
+						<li class="tabs__item">
+							<a class="tabs__link" href="#comments">Comments</a>
+						</li>
+					</ul>
 
-		<p class="cover__text">
-			Feel free to contact us if any questions arise so we can help you do
-			your best
-		</p>
+					<div id="details" class="tabs__tab">
+						<form action="#">
+							<ul>
+								<li class="form-item">
+									<label class="form-item__label" for="activityPeriod">Activity Period</label>
+									<input class="form-item__input" id="activityPeriod" type="text" value="Jan 04">
+									<div class="tooltip">
+										<button class="tooltip__trigger"><img src="img/exclamation.svg"></button>
+										<div class="tooltip__dialog padded-container">
+											<button class="tooltip__close tooltip__trigger"><img src="img/close-gray.svg"></button>
+											<h2 class="tooltip__title">Activity Period</h2>
+											<p>The showers are broken down by intensity with major, minor, variable, and weak showers being separated into their own groups. The general public is encouraged to use the list of major showers as they are the most well known and provide the most activity on a year to year basis. The other showers rarely surpass ten meteors per hour at maximum and are difficult to observe by the general public.</p>
+										</div>
+									</div>
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="maximunDate">Maximun Date</label>
+									<input class="form-item__input" id="maximunDate" type="text" value="283.3°">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="maximumSL">Maximum S.L.</label>
+									<input class="form-item__input" id="maximumSL" type="text" value="15:20">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="radiantRA">Radiant R.A.</label>
+									<input class="form-item__input" id="radiantRA" type="text" value="+49.7°">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="radiantDesc">Radiant Desc.</label>
+									<input class="form-item__input" id="radiantDesc" type="text" value="40.2">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="velocityKms">Velocity km/s</label>
+									<input class="form-item__input" id="velocityKms" type="text" value="2.1">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="r">R</label>
+									<input class="form-item__input" id="r" type="text" value="120">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="time">Time</label>
+									<input class="form-item__input" id="time" type="text" value="0500">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="moon">Moon</label>
+									<input class="form-item__input" id="moon" type="text" value="02">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="quadrantids">Quadrantids</label>
+									<input class="form-item__input" id="quadrantids" type="text" value="GBP">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="lyrids">Lyrids</label>
+									<input class="form-item__input" id="lyrids" type="text" value="9.0000%">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="perseids">Perseids</label>
+									<input class="form-item__input" id="perseids" type="text" value="GBP">
+								</li>
+								<li class="form-item">
+									<label class="form-item__label" for="etaAquarids">Eta Aquarids</label>
+									<input class="form-item__input" id="etaAquarids" type="text" value="8,257.50">
+								</li>
+							</ul>
 
-		<p class="cover__text">Best of luck!!</p>
+							<div class="form-btns">
+								<button class="btn">
+									<img class="btn__img" src="img/floppy.svg">
+									Save
+								</button>
+								<button class="btn btn--inverted">
+									<img class="btn__img" src="img/flame.svg">
+									Explode
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<div id="comments" class="tabs__tab" style="display: none;">
+						<form action="#" class="comment-form">
+							<textarea name="comment" id="comment" cols="30" rows="1" placeholder="Write your comment"></textarea>
+							<button class="comment-form__btn btn-icon"><img src="img/send.svg"></button>
+						</form>
+
+						<ul>
+							<li class="comment">
+								<header class="comment__header">
+									<h2>Charles Mayer</h2>
+									<time class="comment__time">Oct 16, 17:23 AM</time>
+								</header>
+								<p>
+									This appears to be a different program.<br>
+									Please set up as: 556*1989<br>
+									Thanks!
+								</p>
+							</li>
+							<li class="comment">
+								<header class="comment__header">
+									<h2>Helen Roth</h2>
+									<time class="comment__time">Oct 16, 14:05 AM</time>
+								</header>
+								<p>
+									CFG<br>
+									LOOKS LIKE THIS IS TREATY 556, THERE IS A CLAIM SET UP 556*1990*50, HOWEVER THE CLAIMANT IS DIFFERENT
+								</p>
+							</li>
+						</ul>
+					</div>
+
+				</aside>
+			</section>
+
+			<section class="main-layout__content padded-container">
+
+				<h1 class="title-medium">My Meteors</h1>
+
+				<table class="standard-table">
+					<tr>
+						<th>Maximun Date</th>
+						<th>Maximum S.L.</th>
+						<th class="text-right">Radiant R.A.</th>
+						<th class="text-right">Radiant Desc.</th>
+						<th class="text-right">Velocity km/s</th>
+						<th class="text-right">R</th>
+						<th class="text-right">Max ZHR</th>
+						<th class="text-right">Time</th>
+						<th class="text-right">Moon</th>
+						<th class="text-right">Quadrantids</th>
+						<th class="text-right">Lyrids</th>
+						<th class="text-right">Perseids</th>
+						<th class="text-right">eta Aquarids</th>
+						<th>Activity Period</th>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr class="is-selected">
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+															<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+															<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+					<tr>
+						<td>Jan 04</td>
+						<td class="text-right">283.3°</td>
+						<td class="text-right">15:20</td>
+						<td class="text-right">+49.7°</td>
+						<td class="text-right">40.2</td>
+						<td class="text-right">2.1</td>
+						<td class="text-right">120</td>
+						<td class="text-right">0500</td>
+						<td class="text-right">02</td>
+						<td class="text-right">10/19/2020</td>
+						<td class="text-right">9.0000%</td>
+						<td class="text-right">GBP</td>
+						<td class="text-right">8,257.50</td>
+						<td>Dec 26-Jan 16</td>
+					</tr>
+				</table>
+
+			</section>
+
+		</main>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<script>
+			$('#close').on('click', function() {
+				$('#main').addClass('has-sidebar-collapsed');
+			});
+
+			$('#logo').on('click', function() {
+				$('#main').removeClass('has-sidebar-collapsed');
+			});
+
+			$('.tooltip__trigger').on('click', function() {
+				$(this).parents('.tooltip').toggleClass('is-visible');
+			});
+
+			$('.tabs__link').on('click', function() {
+				$('.tabs__link').removeClass('is-selected');
+				$(this).addClass('is-selected');
+
+				$('.tabs__tab').hide();
+				$($(this).attr('href')).show();
+			});
+		</script>
 
 	</body>
 
