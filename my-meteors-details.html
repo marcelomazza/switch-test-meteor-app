@@ -16,17 +16,17 @@
 	<body class="main-layout">
 
 		<nav class="nav">
-			<img class="nav__logo" src="img/logo.svg">
+			<button><img id="logo" class="nav__logo" src="img/logo.svg"></button>
 		</nav>
 
-		<main class="main-layout__main">
+		<main id="main" class="main-layout__main">
 
 			<section class="main-layout__sidebar">
 				<header class="padded-container--small">
-					<button><img src="img/copy.svg"></button>
-					<button><img src="img/bookmark.svg"></button>
-					<button><img src="img/trash.svg"></button>
-					<button><img src="img/close.svg"></button>
+					<button class="btn-icon"><img src="img/copy.svg"></button>
+					<button class="btn-icon"><img src="img/bookmark.svg"></button>
+					<button class="btn-icon"><img src="img/trash.svg"></button>
+					<button id="close" class="btn-icon float-right"><img src="img/close.svg"></button>
 				</header>
 				<aside class="padded-container">
 					<ul class="tabs">
@@ -42,60 +42,76 @@
 						<ul>
 							<li class="form-item">
 								<label class="form-item__label" for="activityPeriod">Activity Period</label>
-								<input id="activityPeriod" type="text" value="Jan 04">
+								<input class="form-item__input" id="activityPeriod" type="text" value="Jan 04">
+								<div class="tooltip">
+									<button class="tooltip__trigger"><img src="img/exclamation.svg"></button>
+									<div class="tooltip__dialog padded-container">
+										<button class="tooltip__close tooltip__trigger"><img src="img/close-gray.svg"></button>
+										<h2 class="tooltip__title">Activity Period</h2>
+										<p>The showers are broken down by intensity with major, minor, variable, and weak showers being separated into their own groups. The general public is encouraged to use the list of major showers as they are the most well known and provide the most activity on a year to year basis. The other showers rarely surpass ten meteors per hour at maximum and are difficult to observe by the general public.</p>
+									</div>
+								</div>
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="maximunDate">Maximun Date</label>
-								<input id="maximunDate" type="text" value="283.3°">
+								<input class="form-item__input" id="maximunDate" type="text" value="283.3°">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="maximumSL">Maximum S.L.</label>
-								<input id="maximumSL" type="text" value="15:20">
+								<input class="form-item__input" id="maximumSL" type="text" value="15:20">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="radiantRA">Radiant R.A.</label>
-								<input id="radiantRA" type="text" value="+49.7°">
+								<input class="form-item__input" id="radiantRA" type="text" value="+49.7°">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="radiantDesc">Radiant Desc.</label>
-								<input id="radiantDesc" type="text" value="40.2">
+								<input class="form-item__input" id="radiantDesc" type="text" value="40.2">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="velocityKms">Velocity km/s</label>
-								<input id="velocityKms" type="text" value="2.1">
+								<input class="form-item__input" id="velocityKms" type="text" value="2.1">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="r">R</label>
-								<input id="r" type="text" value="120">
+								<input class="form-item__input" id="r" type="text" value="120">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="time">Time</label>
-								<input id="time" type="text" value="0500">
+								<input class="form-item__input" id="time" type="text" value="0500">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="moon">Moon</label>
-								<input id="moon" type="text" value="02">
+								<input class="form-item__input" id="moon" type="text" value="02">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="quadrantids">Quadrantids</label>
-								<input id="quadrantids" type="text" value="GBP">
+								<input class="form-item__input" id="quadrantids" type="text" value="GBP">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="lyrids">Lyrids</label>
-								<input id="lyrids" type="text" value="9.0000%">
+								<input class="form-item__input" id="lyrids" type="text" value="9.0000%">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="perseids">Perseids</label>
-								<input id="perseids" type="text" value="GBP">
+								<input class="form-item__input" id="perseids" type="text" value="GBP">
 							</li>
 							<li class="form-item">
 								<label class="form-item__label" for="etaAquarids">Eta Aquarids</label>
-								<input id="etaAquarids" type="text" value="8,257.50">
+								<input class="form-item__input" id="etaAquarids" type="text" value="8,257.50">
 							</li>
 						</ul>
 
-						<button>Save</button>
-						<button>Explode</button>
+						<div class="form-btns">
+							<button class="btn">
+								<img class="btn__img" src="img/floppy.svg">
+								Save
+							</button>
+							<button class="btn btn--inverted">
+								<img class="btn__img" src="img/flame.svg">
+								Explode
+							</button>
+						</div>
 					</form>
 
 				</aside>
@@ -607,6 +623,22 @@
 			</section>
 
 		</main>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<script>
+			$('#close').on('click', function() {
+				$('#main').addClass('has-sidebar-collapsed');
+			});
+
+			$('#logo').on('click', function() {
+				$('#main').removeClass('has-sidebar-collapsed');
+			});
+
+			$('.tooltip__trigger').on('click', function() {
+				$(this).parents('.tooltip').toggleClass('is-visible');
+			});
+		</script>
 
 	</body>
 

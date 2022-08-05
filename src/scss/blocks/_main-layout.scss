@@ -1,3 +1,5 @@
+$sidebar-width: 382px;
+
 .main-layout {
 	display: flex;
 	flex-direction: column;
@@ -10,9 +12,13 @@
 
 .main-layout__sidebar {
 	flex-shrink: 0;
-	flex-basis: 382px;
+	flex-basis: $sidebar-width;
 	background: $gray-100;
 	border: 1px solid $gray-300;
+
+	.has-sidebar-collapsed & {
+		display: none;
+	}
 }
 
 .main-layout__content {

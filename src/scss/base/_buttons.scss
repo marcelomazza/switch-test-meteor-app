@@ -1,0 +1,44 @@
+.btn {
+	display: inline-flex;
+	margin: 0 3px;
+	padding: 5px;
+	border-radius: 3px;
+	color: $white;
+	background: $primary-900;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn--inverted {
+	color: $primary-900;
+	background: transparent;
+	border: 1px solid $primary-900;
+
+	&:hover {
+		background: $primary-100;
+	}
+}
+
+.btn__img {
+	margin-right: 5px;
+}
+
+.btn-icon {
+	border-radius: 100%;
+	padding: 0 1.5px;
+
+	&:hover {
+		cursor: pointer;
+		background: $primary-100;
+	}
+
+	&:active {
+		background: $primary-300;
+	}
+}

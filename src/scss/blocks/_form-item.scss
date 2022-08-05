@@ -1,3 +1,13 @@
 .form-item {
 	display: flex;
+	padding: 7px 3px;
+	align-items: center;
+}
+
+.form-item__label {
+	flex-basis: 120px;
+}
+
+.form-item__input {
+	flex-basis: 58%;
 }
